@@ -9,7 +9,7 @@ app.get('/', function(request, response) {
     var file = fs.readFileSync("index.html");
     // i don't know how to catch exceptions yet, but this will at least ensure
     // we write something, instead of nothing.
-    if (!file.length()) {
+    if (!file.length) {
 	file = def;
     }   
     response.send(file.toString('utf8'));
