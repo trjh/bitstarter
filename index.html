@@ -2,7 +2,9 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Where Are My Files?</title>
+    <title>0.3 Where Are My Files?</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap-combined.no-icons.min.css">
     <link type="text/css" rel="stylesheet"
 	  href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap-2.3.2.css">
     <style type="text/css">
@@ -41,7 +43,15 @@
     </style>
   </head>
   <body>
+    <!-- We use row-fluid inside containers to achieve a resizeable layout.  -->
+    <!-- blogs.endjin.com/2013/04/tips-forimplementing-responsive-designs-usingbootstrap -->
+    <!-- http://stackoverflow.com/a/12270322 -->
     <div class="container">
+      <!-- Font and paired font of .heading/.subheading and body from Google Fonts -->
+      <!-- www.google.com/fonts/specimen/Ubuntu -->
+      <!-- www.google.com/fonts/specimen/Ubuntu#pairings -->
+      <!-- TH: i don't know, I like Ubuntu & Vollkorn, love Josefin Slab -->
+      <!-- also Josefin Slab & PT Serif -->
       <div class="row navigation">
 	<div class="span2 logo">
 	  Logo
@@ -53,21 +63,34 @@
 	  About
 	</div>
       </div>
-      <div class="row heading">
+      <div class="row-fluid heading">
 	<div class="span12">
 	  <h1>Where Are My Files?</h1>
 	</div>
       </div>
-      <div class="row subheading">
+      <div class="row-fluid subheading">
 	<div class="span12">
+	  <!-- Special typography from Bootstrap for lead paragraph -->
+	  <!-- http://twitter.github.io/bootstrap/base-css.html#typography -->
 	  <p class="lead">Helping you figure out what went where</p>
 	</div>
       </div>
-      <div class="row pitch">
-	<div class="span6 video">
-	  Video
+      <div class="row-fluid pitch">
+	<div class="span5 offset1 video">
+	  <img class="img-polaroid" src="http://placehold.it/480x300">
 	</div>
-	<div class="span6">
+
+	<!-- We define a new 'actions' div to contain statistics, order, and share buttons -->
+	<div class="span5 actions">
+	  <div class="span8 offset2">
+	    <div class="statistics">
+	      <div class="span4">
+		<!-- linediv-l and linediv-r give dividing lines that look different in horizontal and vertical layouts,
+		illustrating media queries. -->
+		<div class="linediv-l">
+		<h3>1000</h3> <p>backers</p>
+		</div>
+	      </div>
 	  <div class="thermometer">
 	    Thermometer
 	  </div>
@@ -108,3 +131,6 @@
     </div>
   </body>
 </html>
+
+<!-- vi:sw=2 tw=120
+-->
