@@ -26,7 +26,14 @@
 	  border-left: 1px white solid;
 	}
       }
-      @media (max-width: 979px) { .joint { text-align: right; } } /* squeezed here so line numbering works as we progress */
+
+      /* Midway between large & phones */
+      @media (max-width: 979px) {
+	.joint {
+	  text-align: right;
+	}
+      }
+
       /* Landscape phones and down */
       @media (max-width: 480px) {
 	.copy {
@@ -74,6 +81,12 @@
       .video, .thermometer, .order, .social, .statistics {
 	text-align: center;
       }
+      /* for the twitter button -- would like to tie this to .social too */
+      /* but .social iframe {} doesn't seem to work */
+      iframe {
+	padding: 4px 12px;
+      }
+
       .statistics h3, .statistics p {
 	color: white;
       }
@@ -112,7 +125,8 @@
 	    <span class="icon-bar"></span>
 	    <span class="icon-bar"></span>
 	  </button>
-	  <a class="brand" href="#">Bitstarter</a>
+    <!-- WAMF might not be the best acronym to use, but for now, it'll do -->
+	  <a class="brand" href="#">WAMF</a>
 	  <div class="nav-collapse collapse">
 	    <ul class="nav">
 	      <li class="active"><a href="#">Home</a></li>
@@ -124,6 +138,16 @@
       </div>
     </div>
 
+    <!-- icon ideas
+     * http://www.iconfinder.com/icondetails/172515/128/folder_opened_icon
+     * http://www.iconfinder.com/icondetails/172467/128/folder_icon
+     * http://www.iconfinder.com/icondetails/172546/128/search_icon
+     * http://fortawesome.github.io/Font-Awesome/icon/folder-close-alt/
+     * <i class="icon-search"></i>
+     * <i class="folder-close-alt"></i>
+     * http://fortawesome.github.io/Font-Awesome/icon/search/
+    -->
+
     <!-- We use row-fluid inside containers to achieve a resizable layout.  -->
     <!-- blogs.endjin.com/2013/04/tips-for-implementing-responsive-designs-using-bootstrap/ -->
     <!-- http://stackoverflow.com/a/12270322 -->
@@ -134,40 +158,69 @@
       <div class="row-fluid heading">
 	<div class="span12">
 	  <h1>Where Are My Files?</h1>
+
+	  <!--
 	  <div class="row-fluid"> <div class="span2 offset10 joint"> <small>a <a href="http://trjh.org">trjh</a> joint</small> </div> </div> </div>
+	  /* that was fun, but a bit too egocentric just yet */
+	  -->
       </div>
       <div class="row-fluid subheading">
 	<div class="span12">
 	  <!-- Special typography from Bootstrap for lead paragraph. -->
 	  <!-- http://twitter.github.io/bootstrap/base-css.html#typography -->
 	  <p class="lead">Helping you figure out what went where</p>
+	  <p>Search, index, and find duplicate files -- on your laptop, your
+	  server, old computers, external hard drives -- and the cloud</p>
+	  <!--
+	  <p class="lead">Helping you find and consolidate photographs and
+	  files across multiple computers, external drives, and cloud drives</p>
+	  -->
 	</div>
       </div>
       <div class="row-fluid pitch">
 	<div class="span5 offset1 video">
-	  <img class="img-polaroid" src="http://placehold.it/480x300">
+	  <img class="img-polaroid" src="https://s3-eu-west-1.amazonaws.com/trjh.org/wherearemyfiles/DSC_9219_export_.jpg"
+	  alt="Does your study look like this?">
 	</div>
 
 	<!-- We define a new 'actions' div to contain statistics, order, and share buttons. -->
 	<div class="span5 actions">
 	  <div class="span8 offset2">
+	    <!--
+	     Let's think about goals - I should break down the market with
+	     Facebook/GoogleAdWords, but for now, figure that I know maybe
+	     5 people out of 200 FB friends who would use this tool.  That's
+	     middle-class, multiple-computer owners, anyone with images or
+	     other files scattered across computers (hard drives), external
+	     drives, cds, dvds, etc.  But also anyone who wants to use an
+	     initially somewhat geeky tool.
+
+	     Anyway, if I can extend my reach to 1000 people, that's 25
+	     targets.  Let's aim for 50 expressions of interest, and $100.
+	     (or whatever it'll take to run the site for 3 months)
+	     I expect this to be ad-driven... though I don't know quite how
+	     to garner enough impressions to make it worthwhile.  Though I
+	     do know you'll target digital photo enthusiasts and people
+	     looking for a better backup solution.
+	    -->
+	     */
 	    <div class="statistics">
 	      <div class="span4">
 		<!-- linediv-l and linediv-r give dividing lines that look
 		different in horizontal and vertical layouts,
 		illustrating media queries. -->
 		<div class="linediv-l">
-		<h3>1000</h3> <p>backers</p>
+		<h3>0</h3> <p>backers</p>
 		</div>
 	      </div>
 	      <div class="span4">
 		<div class="linediv-c">
-		  <h3>$6000</h3> <p>of $10,000</p>
+		  <h3>$0</h3> <p>of $500</p>
 		</div>
 	      </div>
 	      <div class="span4">
 		<div class="linediv-r">
-		<h3>10</h3> <p>days left</p>
+		<h3>31</h3> <p>days left</p>
 		</div>
 	      </div>
 	    </div>
@@ -176,29 +229,30 @@
 	    <!-- Bootstrap progress bar -->
 	    <!-- http://twitter.github.io/bootstrap/components.html#progress -->
 	    <div class="thermometer progress active">
-	      <div class="bar bar-success" style="width: 60%;"></div>
-	      <div class="bar bar-warning" style="width: 40%;"></div>
+	      <div class="bar bar-success" style="width: 1%;"></div>
+	      <div class="bar bar-warning" style="width: 99%;"></div>
 	    </div>
 	  </div>
 	  <div class="span6 offset3 order">
 	    <!-- Standard Bootstrap button. -->
 	    <!-- http://twitter.github.io/bootstrap/base-css.html#buttons -->
+	    <!--
 	    <button class="btn btn-success btn-large">Preorder</button>
+	    -->
+	    <button class="btn btn-inverse btn-large">Bitstarter Launching Soon</button>
 	  </div>
-	  <div class="span8 offset2 social">
+	  <div class="span12 social">
+	    <!-- was span8 offset2 -->
 	    <!-- Social buttons are not included in default Bootstrap. -->
 	    <!-- See: http://noizwaves.github.io/bootstrap-social-buttons -->
-	    <button class="btn btn-twitter"><i class="icon-twitter"></i> | Twitter</button>
-	    <button class="btn btn-facebook"><i class="icon-facebook"></i> | Facebook</button>
-	    <!-- <a href="https://twitter.com/WhereAreMyFiles"
+	    <a href="https://twitter.com/WhereAreMyFiles"
 	     class="twitter-follow-button" data-show-count="false"
 	     data-size="large">Follow @WhereAreMyFiles</a>
-	    -->
-	    <a href="https://twitter.com/WhereAreMyFiles"
-	     class="btn btn-twitter" data-show-count="false"
-	     data-size="large"><i class="icon-twitter"></i> | Follow @WhereAreMyFiles</a>
 	    <script>!function(d,s,id){
 	      var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+	    <!-- until i get them to line up, just abandon it
+	    <button padding=0px class="btn btn-facebook"><i class="icon-facebook"></i> | Facebook</button>
+	    -->
 	  </div>
 	</div>
       </div>
@@ -209,14 +263,25 @@
       <!-- http://placehold.it -->
       <div class="row-fluid section1">
 	<div class="span5 offset1 asset">
-	  <img class="img-polaroid" src="http://placehold.it/480x300">
+	  <img class="img-polaroid" alt="from the simple case of just copying files from one system to another" src="https://s3-eu-west-1.amazonaws.com/trjh.org/wherearemyfiles/DSC_9223_simple_export.jpg">
 	</div>
 	<div class="span5 copy">
 	  <p>
-	    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean volutpat ligula vel sapien porttitor, vel
-	    dictum purus porta. Curabitur elementum ornare sollicitudin. Pellentesque lobortis ullamcorper arcu id congue.
-	    Aliquam sollicitudin eget nisi non scelerisque. Pellentesque habitant morbi tristique senectus et netus et
-	    malesuada fames ac turpis egestas. Suspendisse fringilla a mauris eget tempus.
+	    You've just bought a new computer, and used the built-in utilities
+	    to transfer your files from the old computer.  Are you sure it
+	    compied all your important files? </p>
+	  <p>
+	    You've had digital cameras for five years, and you're sure you
+	    backed up all your photographs to hard drive, CD, or DVD.  Now you
+	    want a picture from 2009.  Do you know which drive or CD it's on?
+	    </p>
+	  <p>
+	    You're backing up all your vital files to Dropbox.  That filled
+	    up, so you've put some of them on Google Drive.  Are you sure that
+	    all your files are backed up to one or the other? </p>
+	  <p>
+	    Where Are My Files can help you make sure the answer is
+	    <strong>Yes</strong></p>
 	  </p>
 	</div>
       </div>
@@ -224,14 +289,18 @@
       <div class="row-fluid section2">
 	<div class="span5 offset1 copy copy-right">
 	  <p>
-	    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean volutpat ligula vel sapien porttitor, vel
-	    dictum purus porta. Curabitur elementum ornare sollicitudin. Pellentesque lobortis ullamcorper arcu id congue.
-	    Aliquam sollicitudin eget nisi non scelerisque. Pellentesque habitant morbi tristique senectus et netus et
-	    malesuada fames ac turpis egestas. Suspendisse fringilla a mauris eget tempus.
-	  </p>
+	    The "Where Are My Files?" service will list and fingerprint all
+	    the files you have on your current computers, your old computers,
+	    your external hard drives, and anything else.  </p>
+	  <p>
+	    The service can then tell you where your files are by filename,
+	    and where you have duplicates. </p>
+	  <p>
+	    It can help you ensure all your old files are copied to a central
+	    fileserver, or just to your newest computer. </p>
 	</div>
 	<div class="span5 asset">
-	  <img class="img-polaroid" src="http://placehold.it/480x300">
+	  <img class="img-polaroid" alt="...to those of you with a few drives sitting around as backup" src="https://s3-eu-west-1.amazonaws.com/trjh.org/wherearemyfiles/DSC_9239_justafewdrives_export_.jpg">
 	</div>
       </div>
 
@@ -246,28 +315,69 @@
 	      <div class="accordion-heading">
 		<a class="accordion-toggle" data-toggle="collapse"
 		   data-parent="#accordion2" href="#collapseOne">
-		  What does FAQ stand for?
+		  What else can it do?
 		</a>
 	      </div>
 	      <div id="collapseOne" class="accordion-body collapse">
 		<div class="accordion-inner">
-		  Frequently Asked Question.
+		  With enough development funding, WAMF can help you
+		  distinguish between your own files and those of the
+		  operating system (Windows, Mac OS-X, etc)
 		</div>
 	      </div>
 	    </div>
+
 	    <div class="accordion-group">
 	      <div class="accordion-heading">
 		<a class="accordion-toggle" data-toggle="collapse"
 		   data-parent="#accordion2" href="#collapseTwo">
-		  What's a Frequently Asked Question?
+		  How will it index my files?
 		</a>
 	      </div>
 	      <div id="collapseTwo" class="accordion-body collapse">
 		<div class="accordion-inner">
-		  A question which is commonly asked by users.
+		  You will be able to download a small simple indexing program
+		  that will examine your hard drive(s) and send fingerprints
+		  to our servers.
 		</div>
 	      </div>
 	    </div>
+
+	    <div class="accordion-group">
+	      <div class="accordion-heading">
+		<a class="accordion-toggle" data-toggle="collapse"
+		   data-parent="#accordion2" href="#collapseThree">
+		  What information will WAMF store?
+		</a>
+	      </div>
+	      <div id="collapseThree" class="accordion-body collapse">
+		<div class="accordion-inner">
+		  Where Are My Files will store the name you give to your
+		  computer, external hard drive, or CD/DVD/USB Key.  It will
+		  also store the name, folder hierarchy, size, and fingerprint
+		  of each file on your computer/external drive/etc.
+		</div>
+	      </div>
+	    </div>
+
+	    <div class="accordion-group">
+	      <div class="accordion-heading">
+		<a class="accordion-toggle" data-toggle="collapse"
+		   data-parent="#accordion2" href="#collapseFour">
+		  How are you fingerprinting my files?
+		</a>
+	      </div>
+	      <div id="collapseFour" class="accordion-body collapse">
+		<div class="accordion-inner">
+		  We'll use the MD5 hash.  While it may be more prone to
+		  collsions than SHA-1 or other hash methods, it can often be
+		  faster to compute on older machines, and is still <a
+		  href="http://stackoverflow.com/questions/201705/how-many-random-elements-before-md5-produces-collisions">reasonably
+		  unique</a>
+		</div>
+	      </div>
+	    </div>
+
 	</div>
       </div> <!-- end row-fluid faq -->
 
@@ -275,19 +385,25 @@
 
     <!-- Not crucial, but we put this under a CC By-SA 3.0 license. -->
     <!-- http://creativecommons.org/licenses -->
+    <section id="contact">
+    <div class="row-fluid">
+      <div class="span12">
+	Contact us by <a href="mailto:info@wherearemyfiles.net">email</a> or <a
+	href="http://twitter.com/wherearemyfiles" target="_blank">twitter</a>
+	  for more information, though I don't promise that we have any.
+      </div>
+    </div>
     <div class="row-fluid footer">
       <div class="span12">
-	<p>This work is licensed under
-	  the <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC
-	    By-SA 3.0
-	  </a>, without all the cruft that would otherwise be
-	  put at the bottom of the page.</p>
-	  Brought to you by
+	  Brought to you by <a href="http://twitter.com/wherearemyfiles">@wherearemyfiles</a>,
+	  and <a href="http://twitter.com/trjh">@trjh</a>, and
+      
 	  <!-- <a href="https://www.coursera.org/course/startup"> <h3 style="font-size:12px;line-height:1.2em;">Startup Engineering</h3> -->
 	  <a href="https://www.coursera.org/course/startup">Startup Engineering</a>
 	</div>
       </div>
     </div>
+    </section>
   </body>
 </html>
 
