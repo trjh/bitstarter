@@ -9,9 +9,12 @@
     <link rel="stylesheet" href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fsocial-buttons.css">
     <script src="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fjquery.js"></script>
     <script src="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700|Raleway:400,600' rel='stylesheet' type='text/css'>
+    <!--
     <link href="http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,300italic,400italic,500italic,700italic" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,300,400,600,700,800"
 	  rel="stylesheet" type="text/css">
+    -->
     <style type="text/css">
 
       /* Large desktop */
@@ -51,10 +54,16 @@
 
       /* Main body and headings */
       body{
-	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+	font-family: 'PT Sans', Helvetica, Arial, sans-serif;
       }
-      .heading, .subheading {
-	font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
+      .heading {
+	font-family: 'Raleway', Arial, sans-srif;
+	font-weight: 600;
+	text-align: center;
+      }
+      .subheading {
+	font-family: 'Raleway', Arial, sans-srif;
+	font-weight: 400;
 	text-align: center;
       }
       p.lead {
@@ -62,9 +71,15 @@
 	font-size: 24px;
 	line-height: 30px;
       }
+      p.emphasis {
+	padding-top: 2%;
+	font-size: 16px;
+	line-height: 20px;
+	text-align: center;
+      }
       p {
-	font-size: 18px;
-	line-height: 24px;
+	font-size: 16px;
+	line-height: 20px;
       }
 
       /* Video pitch and Action */
@@ -154,7 +169,9 @@
     <div class="container">
       <!-- Font and paired font of .heading/.subheading and body from Google Fonts -->
       <!-- www.google.com/fonts/specimen/Ubuntu -->
-      <!-- www.google.com/fonts/specimen/Ubuntu#pairings --> <!-- TH: i don't know, I like Ubuntu & Vollkorn, love Josefin Slab --> <!-- also Josefin Slab & PT Serif -->
+      <!-- www.google.com/fonts/specimen/Ubuntu#pairings -->
+      <!-- TH: i don't know, I like Ubuntu & Vollkorn, love Josefin Slab -->
+      <!-- also Josefin Slab & PT Serif -->
       <div class="row-fluid heading">
 	<div class="span12">
 	  <h1>Where Are My Files?</h1>
@@ -280,9 +297,9 @@
 	    You're backing up all your vital files to Dropbox.  That filled
 	    up, so you've put some of them on Google Drive.  Are you sure that
 	    all your files are backed up to one or the other? </p>
-	  <p>
+	  <p class="emphasis">
 	    Where Are My Files can help you make sure the answer is
-	    <strong>Yes</strong></p>
+	    <strong><u>Yes</u></strong></p>
 	  </p>
 	</div>
       </div>
@@ -397,7 +414,7 @@
     <div class="row-fluid footer">
       <div class="span12">
 	  Brought to you by <a href="http://twitter.com/wherearemyfiles">@wherearemyfiles</a>,
-	  and <a href="http://twitter.com/trjh">@trjh</a>, and
+	  <a href="http://twitter.com/trjh">@trjh</a>, and
       
 	  <!-- <a href="https://www.coursera.org/course/startup"> <h3 style="font-size:12px;line-height:1.2em;">Startup Engineering</h3> -->
 	  <a href="https://www.coursera.org/course/startup">Startup Engineering</a>
