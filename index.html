@@ -132,7 +132,28 @@
       .footer a {
 	color: #ccccff;
       }
+      /* http://support.addthis.com/customer/portal/questions/1136093-share-buttons-in-center-position */      
+      div.addthis_toolbox {
+	width:180px;
+	margin: 0 auto;
+      }
     </style>
+
+    <!-- AddThis Smart Layers BEGIN -->
+    <!-- Go to http://www.addthis.com/get/smart-layers to customize -->
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-51fd43ad60519cc8"></script>
+    <script type="text/javascript">
+      addthis.layers({
+	'theme' : 'gray', 
+	'follow' : {
+	  'services' : [
+	    {'service': 'facebook', 'id': 'fileclerk.co'},
+	    {'service': 'twitter', 'id': 'fileclerk'}
+	  ]
+	}   
+      });
+    </script>
+    <!-- AddThis Smart Layers END -->
   </head>
   <body>
 
@@ -288,12 +309,9 @@
 	  <div class="row-fluid">
 	  <div class="span8 offset2 social">
 	      <!-- AddThis Button BEGIN -->
-	      <div class="addthis_toolbox addthis_default_style
-	      addthis_32x32_style">
+	      <div class="addthis_toolbox addthis_default_style addthis_32x32_style">
 	      <a class="addthis_button_preferred_1"></a>
 	      <a class="addthis_button_preferred_2"></a>
-	      <a class="addthis_button_preferred_3"></a>
-	      <a class="addthis_button_preferred_4"></a>
 	      <a class="addthis_button_compact"></a>
 	      <a class="addthis_counter addthis_bubble_style"></a>
 	      </div>
@@ -434,7 +452,17 @@
 
     <!-- Not crucial, but we put this under a CC By-SA 3.0 license. -->
     <!-- http://creativecommons.org/licenses -->
+
     <section id="contact">
+
+    <!-- AddThis Follow BEGIN -->
+<div class="addthis_toolbox addthis_32x32_style addthis_default_style">
+<a class="addthis_button_facebook_follow" addthis:userid="fileclerk.co"></a>
+<a class="addthis_button_twitter_follow" addthis:userid="fileclerk"></a>
+</div>
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-51fd43ad60519cc8"></script>
+    <!-- AddThis Follow END -->
+
     <div class="row-fluid">
       <div class="span12 contact">
 	Contact us by <a href="mailto:info@wherearemyfiles.net">email</a> or <a
