@@ -94,6 +94,7 @@
 	padding: 2.5% 0%;
       }
       .order {
+	width: 273px;
 	padding: 2% 0%;
       }
       .actions {
@@ -321,14 +322,32 @@
 	  </div>
 	  <div class="row-fluid">
 	  <div class="span6 offset3 order">
-	    <!-- Standard Bootstrap button. -->
-	    <!-- http://twitter.github.io/bootstrap/base-css.html#buttons -->
-	    <!--
-	    <button class="btn btn-success btn-large">Preorder</button>
+	    <!-- add this hover text at some point,
+		 i've tried the basic wikimedia code, but this button is
+		 turned into an iframe by the CSS, and the alert isn't
+		 the right thing to use anyway.  Maybe via this code?
+
+		 http://www.webdesignerdepot.com/2012/11/how-to-create-a-simple-css3-tooltip/
+
+		 title="This service will be free at launch. We might
+		 charge for some aspects of it in future, but in the
+		 meantime, if you would like to contribute to the
+		 development, operation, or beer fund, click here!"
 	    -->
+	    <a class="coinbase-button"
+	       data-code="1da2686768acff801441ebcf3cb14770"
+	       data-button-style="custom_large"
+	       data-button-text="Bitcoin Tip Jar"
+	       href="https://coinbase.com/checkouts/1da2686768acff801441ebcf3cb14770">
+	       Bitcoin Tip Jar
+	    </a>
+	    <script src="https://coinbase.com/assets/button.js"
+		    type="text/javascript"></script>
+	    <!--
 	    <button class="btn btn-inverse btn-large" style="font-size: 110%">
 		Bitstarter Launching Soon
 	    </button>
+	    -->
 	  </div>
 	  </div>
 	  <div class="row-fluid">
